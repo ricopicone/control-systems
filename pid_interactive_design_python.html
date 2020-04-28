@@ -13378,7 +13378,8 @@ div#notebook {
     <span class="k">global</span> <span class="n">t_step</span><span class="p">,</span> <span class="n">G_tf</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">TransferFunction</span><span class="o">.</span><span class="n">s</span>
     <span class="n">C_tf</span> <span class="o">=</span> <span class="n">Kp</span> <span class="o">+</span> <span class="n">Ki</span><span class="o">/</span><span class="n">s</span> <span class="o">+</span> <span class="n">Kd</span><span class="o">*</span><span class="n">s</span>
-    <span class="n">sys_CL</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">feedback</span><span class="p">(</span><span class="n">C_tf</span><span class="o">*</span><span class="n">G_tf</span><span class="p">)</span>
+    <span class="n">sys_forward</span> <span class="o">=</span> <span class="n">C_tf</span><span class="o">*</span><span class="n">G_tf</span>
+    <span class="n">sys_CL</span> <span class="o">=</span> <span class="n">sys_forward</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">sys_forward</span><span class="p">)</span>
     <span class="n">t_step</span><span class="p">,</span><span class="n">y_step</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">step_response</span><span class="p">(</span><span class="n">sys_CL</span><span class="p">,</span> <span class="n">t_step</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">y_step</span>
 
