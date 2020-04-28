@@ -22,7 +22,7 @@ VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'IPython', 'tikzplotlib', 'os', 'matplotlib', 'matplotlib',  
+    'IPython', 'tikzplotlib', 'matplotlib',  
     # 'requests', 'maya', 'records',
 ]
 
