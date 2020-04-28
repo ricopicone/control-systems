@@ -13408,32 +13408,53 @@ $$\frac{1.5 \times 10^{4}}{s^4 + 50 s^3 + 875 s^2 + 6250 s + 3 \times 10^{4}}$$
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># t_step = np.linspace(0,3,200)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t_step</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
 
 
-<span class="c1"># def step_response(Kp = 1.0, Ki = 0.0, Kd = 0.0):</span>
-<span class="c1">#     global t_step, G_tf</span>
-<span class="c1">#     sys_CL = pid_CL_tf(G_tf,Kp=Kp,Ki=Ki,Kd=Kd)</span>
-<span class="c1">#     t_step,y_step = c.step_response(sys_CL, t_step)</span>
-<span class="c1">#     return y_step</span>
+<span class="k">def</span> <span class="nf">step_response</span><span class="p">(</span><span class="n">Kp</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Ki</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">Kd</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">t_step</span><span class="p">,</span> <span class="n">G_tf</span>
+    <span class="n">sys_CL</span> <span class="o">=</span> <span class="n">pid_CL_tf</span><span class="p">(</span><span class="n">G_tf</span><span class="p">,</span><span class="n">Kp</span><span class="o">=</span><span class="n">Kp</span><span class="p">,</span><span class="n">Ki</span><span class="o">=</span><span class="n">Ki</span><span class="p">,</span><span class="n">Kd</span><span class="o">=</span><span class="n">Kd</span><span class="p">)</span>
+    <span class="n">t_step</span><span class="p">,</span><span class="n">y_step</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">step_response</span><span class="p">(</span><span class="n">sys_CL</span><span class="p">,</span> <span class="n">t_step</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_step</span>
 
-<span class="c1"># opts = {</span>
-<span class="c1"># #     &#39;xlim&#39;: (0, 50),</span>
-<span class="c1"># #     &#39;ylim&#39;: (0, 55),</span>
-<span class="c1">#     &#39;animation_duration&#39;: 250,</span>
-<span class="c1"># }</span>
+<span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+<span class="c1">#     &#39;xlim&#39;: (0, 50),</span>
+<span class="c1">#     &#39;ylim&#39;: (0, 55),</span>
+    <span class="s1">&#39;animation_duration&#39;</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span>
+<span class="p">}</span>
 
-<span class="c1"># nbi.line(</span>
-<span class="c1">#     t_step, </span>
-<span class="c1">#     step_response, </span>
-<span class="c1">#     Kp=(0,10),</span>
-<span class="c1">#     Ki=(0,20),</span>
-<span class="c1">#     Kd=(0,1),</span>
-<span class="c1">#     options=opts</span>
-<span class="c1"># )</span>
+<span class="n">nbi</span><span class="o">.</span><span class="n">line</span><span class="p">(</span>
+    <span class="n">t_step</span><span class="p">,</span> 
+    <span class="n">step_response</span><span class="p">,</span> 
+    <span class="n">Kp</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+    <span class="n">Ki</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span>
+    <span class="n">Kd</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">options</span><span class="o">=</span><span class="n">opts</span>
+<span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
 </div>
 </div>
 
