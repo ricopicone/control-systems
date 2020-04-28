@@ -3,4 +3,4 @@ sympy
 matplotlib
 ipywidgets
 nbinteract
-front_matter
+./front_matter
