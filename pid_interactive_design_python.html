@@ -13293,6 +13293,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pid_CL_tf</span><span class="p">(</span><span class="n">plant_tf</span><span class="p">,</span><span class="n">controller_tf</span><span class="p">,</span><span class="n">Kp</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Ki</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Kd</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">TransferFunction</span><span class="o">.</span><span class="n">s</span>
     <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">feedback</span><span class="p">(</span><span class="n">controller_tf</span><span class="o">*</span><span class="n">plant_tf</span><span class="p">)</span>
 </pre></div>
 
