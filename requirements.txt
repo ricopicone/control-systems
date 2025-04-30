@@ -4,5 +4,5 @@ matplotlib
 ipywidgets
 nbinteract
 ipympl
-dysys>=0.1.8
+dysys
 control
