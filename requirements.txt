@@ -5,3 +5,4 @@ ipywidgets
 nbinteract
 ipympl
 control
+dysys
